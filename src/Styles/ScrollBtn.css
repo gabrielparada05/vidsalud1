@@ -1,0 +1,26 @@
+.scroll-button {
+     display: none; 
+    position: fixed;
+    bottom: 28px;
+    right: 450px; 
+    /* background-color: #25d366; */
+    border: white;
+    color: #25d366;
+    cursor: pointer;
+    z-index: 20;   
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 40px
+  }
+  
+  .scroll-button:hover {
+    background-color: none;
+    transform: scale(1.1); 
+  }
+
+  @media screen and (max-width: 640px){
+    .scroll-button {
+        display: block
+    }
+  };
+    
+

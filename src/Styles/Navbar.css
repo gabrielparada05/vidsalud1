@@ -7,7 +7,7 @@
     background-color: white;
 }
 .navbar-title a {
-    color: #1A8EFD;
+    color: #15878e;
     letter-spacing: .6px;
     text-decoration: none;
 }
@@ -46,7 +46,7 @@
     border: 1px solid transparent;
     border-radius: 28px;
     outline: transparent;
-    background-color: #1A8EFD;
+    background-color: #25d366;
     font-size: 18px;
     font-family: 'Rubik', sans-serif;
     letter-spacing: .8px;
@@ -54,9 +54,9 @@
     transition: all .4s ease;
 }
 .navbar-btn:hover {
-    color: #1A8EFD;
+    color: #15878e;
     background-color: white;
-    border: 1px solid #1A8EFD;
+    border: 1px solid #15878e;
 }
 /* Hamburger Icon */
 .mobile-nav {

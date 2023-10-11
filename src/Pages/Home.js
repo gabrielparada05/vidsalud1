@@ -7,12 +7,14 @@ import BookAppointment from "../Components/BookAppointment";
 import Reviews from "../Components/Reviews";
 import Doctors from "../Components/Doctors";
 import Footer from "../Components/Footer";
+import ScrollButton from "../Components/ScrollBtn";
 
 function Home() {
   return (
     <div className="home-section">
       <Navbar />
       <Hero />
+      {/* <ScrollButton/> */}
       <Info />
       <About />
       <BookAppointment />

@@ -5,9 +5,11 @@ import {
   faBars,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import "../Styles/Navbar.css";
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
+import vidLogo from '../Assets/vid_logo.jpg'
 
 function Navbar() {
   const [nav, setNav] = useState(false);
@@ -17,21 +19,32 @@ function Navbar() {
     setNav(!nav);
   };
 
-  const handleChatBtnClick = () => {
-    if (!isButtonDisabled) {
-      toast.info("Experiencing high traffic, Please wait a moment.", {
-        position: toast.POSITION.TOP_CENTER,
-        onOpen: () => setIsButtonDisabled(true),
-        onClose: () => setIsButtonDisabled(false),
-      });
-    }
+
+  const phoneNumber = '+12892643058'; 
+  
+  const handleClick = () => {
+      const whatsappURL = `whatsapp://send?phone=${phoneNumber}`;
+      window.location.href = whatsappURL;
   };
+
+  // const handleChatBtnClick = () => {
+  //   if (!isButtonDisabled) {
+  //     toast.info("Experiencing high traffic, Please wait a moment.", {
+  //       position: toast.POSITION.TOP_CENTER,
+  //       onOpen: () => setIsButtonDisabled(true),
+  //       onClose: () => setIsButtonDisabled(false),
+  //     });
+  //   }
+  // };
 
   return (
     <div className="navbar-section">
       <h1 className="navbar-title">
         <Link to="/">
-          Health <span className="navbar-sign">+</span>
+          {/* Health <span className="navbar-sign">+</span> */}
+          <div>
+          <img src={vidLogo} alt='logo_vid_salud'/> 
+          </div>
         </Link>
       </h1>
 
@@ -44,22 +57,22 @@ function Navbar() {
         </li>
         <li>
           <a href="#services" className="navbar-links">
-            Services
+            Servicios
           </a>
         </li>
         <li>
           <a href="#about" className="navbar-links">
-            About
+            Quienes Somos 
           </a>
         </li>
         <li>
           <a href="#reviews" className="navbar-links">
-            Reviews
+            Comentarios
           </a>
         </li>
         <li>
           <a href="#doctors" className="navbar-links">
-            Doctors
+            Staff 
           </a>
         </li>
       </ul>
@@ -68,9 +81,9 @@ function Navbar() {
         className="navbar-btn"
         type="button"
         disabled={isButtonDisabled}
-        onClick={handleChatBtnClick}
+        onClick={handleClick}
       >
-        <FontAwesomeIcon icon={faCommentDots} /> Live Chat
+        <FontAwesomeIcon icon={faWhatsapp} /> Live Chat
       </button>
 
       {/* Mobile */}
@@ -87,27 +100,27 @@ function Navbar() {
           </li>
           <li>
             <a onClick={openNav} href="#services">
-              Services
+              Servicios
             </a>
           </li>
           <li>
             <a onClick={openNav} href="#about">
-              About
+             Nosotros
             </a>
           </li>
           <li>
             <a onClick={openNav} href="#reviews">
-              Reviews
+              Comentarios
             </a>
           </li>
           <li>
             <a onClick={openNav} href="#doctors">
-              Doctors
+              Staff
             </a>
           </li>
           <li>
             <a onClick={openNav} href="#contact">
-              Contact
+              Contactanos 
             </a>
           </li>
         </ul>

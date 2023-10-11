@@ -34,7 +34,7 @@
     position: absolute;
     width: 75%;
     height: 4px;
-    background-color: #9D2553;
+    background-color: #ffc1e2;
     border-radius: 8px;
     left: 0;
     bottom: -12px;
@@ -68,7 +68,7 @@
     border: 1px solid transparent;
     border-radius: 50px;
     outline: transparent;
-    background-color: #1A8EFD;
+    background-color: #15978e;
     font-size: 20px;
     font-family: 'Rubik', sans-serif;
     letter-spacing: .8px;

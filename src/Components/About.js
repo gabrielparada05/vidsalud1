@@ -12,13 +12,13 @@ function About() {
 
       <div className="about-text-content">
         <h3 className="about-title">
-          <span>About Us</span>
+          <span>Sobre nosotros</span>
         </h3>
         <p className="about-description">
-          Welcome to Health Plus, your trusted partner for accessible and
-          personalized healthcare. Our expert doctors offer online consultations
-          and specialized services, prioritizing your well-being. Join us on
-          this journey towards a healthier you.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis metus ac massa 
+        molestie posuere. Praesent efficitur faucibus tempus. Quisque vel tempus sem. Quisque hendrerit orci erat, 
+        vitae facilisis ipsum lacinia id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Morbi congue nulla tellus, ultricies tincidunt leo aliquet bibendum. Cras et congue elit, et interdum nisi
         </p>
 
         <h4 className="about-text-title">Your Solutions</h4>

@@ -3,7 +3,9 @@ import Doctor from "../Assets/doctor-picture.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarCheck, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate  } from "react-router-dom";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 import "../Styles/Hero.css";
+import '../Styles/ScrollBtn.css'
 
 function Hero() {
   const navigate = useNavigate();
@@ -12,6 +14,14 @@ function Hero() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+
+  const phoneNumber = '+12892643058'; 
+
+  const handleButtonWhatsapp = () => {
+    const whatsappURL = `whatsapp://send?phone=${phoneNumber}`;
+      window.location.href = whatsappURL;
+  }
 
   const handleBookAppointmentClick = () => {
     navigate("/appointment");
@@ -81,6 +91,14 @@ function Hero() {
       >
         <FontAwesomeIcon icon={faAngleUp} />
       </div>
+
+      <div
+        onClick={handleButtonWhatsapp}
+        className="scroll-button" 
+      >
+      <FontAwesomeIcon icon={faWhatsapp}/>
+      </div>
+
     </div>
   );
 }
